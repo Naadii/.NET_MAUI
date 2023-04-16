@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMA_MoneyAssistant.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{DynamicResource ColorPrimary}">
+
+    <ContentPage.Content>
+        <Grid RowDefinitions="375,*">
+            <Grid Grid.Row="0">
+                <Label Text="Money Assistant" Style="{DynamicResource TitleLabelStyle}"
+                       Margin="0,200,0,0" FontSize="30"/>
+                <Image Source="finance_welcome_logo.png"
+                       Aspect="AspectFit"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="End"
+                       Margin="0,0,0,-10"
+                       HeightRequest="100"/>
+            </Grid>
+            <Grid Grid.Row="1"
+                  RowDefinitions="100,*"
+                  RowSpacing="0">
+                <Path Data="m-0.30901,146.79507c129.42576,-111.87329 360.43564,-100.12672 455.99999,0l0,35.77189c-141.84157,-3.12671 -257.72275,0.12673 -455.99999,1l0,-36.77189z"
+                      Fill="{DynamicResource ColorAccent}"
+                      Aspect="Uniform"
+                      HorizontalOptions="FillAndExpand"/>
+                <StackLayout Grid.Row="1"
+                             BackgroundColor="{DynamicResource ColorAccent}"
+                             Margin="0,-30,0,0"
+                             Padding="30,0,30,30">
+                    <Label Text="Take Care"
+                           Style="{DynamicResource HeaderLabelStyle}"
+                           TextColor="{DynamicResource ColorPrimary}"
+                           FontSize="20"/>
+                    <Label Text="of your finances"
+                           Style="{DynamicResource HeaderLabelStyle}"
+                           FontSize="20"/>
+                    <Label Text="Lorem ipsum dolor sit amet,"
+                           Style="{DynamicResource SubHeaderLabelStyle}"
+                           FontSize="15"/>
+                    <Label Text="consectetur adipiscing elit."
+                           Style="{DynamicResource SubHeaderLabelStyle}"
+                           FontSize="15"/>
+                    <Button Text="Login to account"
+                            Style="{DynamicResource PrimaryButtonStyle}"
+                            BackgroundColor="{DynamicResource ColorPrimary}"
+                            Margin="0,25,0,15"
+                            Clicked="OnLoginClicked"/>
+                    <Button Text="Create an account"
+                            Style="{DynamicResource SecondaryButtonStyle}"
+                            Clicked="OnSignupClicked"
+                            />
+
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+    
+
+</ContentPage>
